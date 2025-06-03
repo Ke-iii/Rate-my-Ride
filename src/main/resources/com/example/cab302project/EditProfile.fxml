@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.cab302project.Controller.EditProfileController"
+            prefHeight="600.0" prefWidth="900.0"
+            stylesheets="@style.css">
+
+    <!-- Top panel with search bar and user icon -->
+    <top>
+        <HBox spacing="10" alignment="CENTER" styleClass="top-bar">
+            <!-- Logo -->
+            <ImageView fitHeight="40" fitWidth="160" preserveRatio="true">
+                <image>
+                    <Image url="@logo.png"/>
+                </image>
+            </ImageView>
+
+            <!-- Search bar -->
+            <TextField promptText="Search" styleClass="search-bar"/>
+
+            <!-- Add post button -->
+            <Button text="+ add post" styleClass="add-post-button"/>
+
+            <!-- Profile picture -->
+            <ImageView fitHeight="40" fitWidth="40" preserveRatio="true">
+                <image>
+                    <Image url="@profile_picture.jpg"/>
+                </image>
+            </ImageView>
+        </HBox>
+    </top>
+
+    <!-- Left panel for settings -->
+    <left>
+        <VBox spacing="10" alignment="TOP_CENTER" styleClass="settings-panel">
+            <Button text="Edit Profile" styleClass="settings-button"/>
+            <Button text="Privacy" styleClass="settings-button"/>
+            <Button text="Language" styleClass="settings-button"/>
+            <Button text="Change Password" styleClass="settings-button"/>
+            <Button text="Preferences" styleClass="settings-button"/>
+        </VBox>
+    </left>
+
+    <!-- Center panel for edit profile form -->
+    <center>
+        <VBox spacing="20" alignment="TOP_LEFT" styleClass="edit-profile-panel">
+            <Label text="Edit Profile" styleClass="edit-profile-title"/>
+            <HBox spacing="10" alignment="TOP_LEFT">
+                <ImageView fitHeight="80" fitWidth="80" preserveRatio="true">
+                    <image>
+                        <Image url="@profile_picture.jpg"/>
+                    </image>
+                </ImageView>
+                <Button text="Change picture" styleClass="change-picture-button"/>
+            </HBox>
+            <GridPane hgap="10" vgap="10" styleClass="form-grid">
+                <Label text="First Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="firstNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Last Name:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <TextField fx:id="lastNameField" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                <Label text="Username:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="usernameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Email:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="emailField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Label text="Description:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="descriptionField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Cancel" onAction="#handleCancel" styleClass="cancel-button" />
+                <Button text="Save" onAction="#saveProfile" styleClass="save-button"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

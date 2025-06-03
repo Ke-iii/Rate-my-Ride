@@ -1,0 +1,112 @@
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-background-color: #f9f9f9;
+}
+
+.text-field:focused {
+    -fx-border-color: #66afe9;
+    -fx-background-color: #fff;
+}
+
+/* ----General styling for log in and sign up---- */
+.welcome-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.form-box {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.5, 0, 0);
+}
+
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: top-center;
+    -fx-padding: 0 0 20 0;
+}
+
+.text-field, .password-field {
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+.login-button {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.5, 0, 0);
+}
+
+.signup-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+    -fx-text-fill: #000000;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+/* Style for form fields */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #000000;
+    -fx-background-color: #ffffff;
+}
+
+/* Hover effect for buttons */
+.login-button:hover, .signup-button:hover {
+    -fx-background-color: #333333;
+}
+
+.login-status-label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+    -fx-text-fill: red;
+}
+/*Background image*/
+.root {
+    -fx-background-image: url("car_pic.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-color: radial-gradient(                              /* Background color for when the picture doesn't work*/
+        focus-angle 0deg, focus-distance 0%, center 50% 50%, radius 50%,
+        reflect, #4f5c70, #94aed6
+    );
+}
+/*
+.root {
+    -fx-background-image: url("/Image_assets/car_pic.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+*/
+ /* Status messages */
+ .registration-message {
+     -fx-text-fill: green;
+ }
+
+ .confirm-password-message {
+     -fx-text-fill: red;
+ }
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.cab302project.Controller.CommentsController" stylesheets="@navbas.css"
+            style="-fx-background-color: white;">
+
+    <!-- Top MenuBar -->
+    <top>
+        <HBox alignment="CENTER" spacing="0">
+            <!-- Left MenuBar -->
+            <MenuBar HBox.hgrow="ALWAYS">
+                <Menu>
+                    <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0">
+                            <image>
+                                <Image url="@../../../Image_assets/logo.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <MenuItem text="Home" onAction="#HomeButton"/>
+                </Menu>
+            </MenuBar>
+
+            <!-- Right MenuBar -->
+            <MenuBar HBox.hgrow="NEVER">
+                <Menu text="+ Add Post">
+                    <MenuItem text="Create Post" onAction="#onNextButtonClick"/>
+                </Menu>
+
+                <Menu>
+                    <graphic>
+                        <ImageView fx:id="profileImageView" fitHeight="60.0" fitWidth="60.0"/>
+                    </graphic>
+                    <MenuItem onAction="#pageRedirect" text="View Profile"/>
+                    <MenuItem onAction="#pageRedirectSettings" text="Settings"/>
+                    <MenuItem fx:id="logout" onAction="#logOut" text="Logout"/>
+                </Menu>
+            </MenuBar>
+        </HBox>
+    </top>
+
+
+    <!-- Center content -->
+    <center>
+        <HBox spacing="10" alignment="CENTER">
+            <!-- Section taking 25% -->
+            <VBox fx:id="leftSection" HBox.hgrow="ALWAYS" maxWidth="Infinity" alignment="TOP_CENTER" spacing="15"
+                  styleClass="form-box">
+                <VBox fx:id="postsContainer" alignment="CENTER" spacing="20.0" styleClass="posts-container">
+                </VBox>
+            </VBox>
+
+
+
+            <VBox fx:id="rightSection" HBox.hgrow="ALWAYS" maxWidth="Infinity" styleClass="form-box">
+
+
+                <Label fx:id="Comments" text="Comments" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+                <ScrollPane fitToWidth="true" fitToHeight="true">
+                    <content>
+                        <VBox fx:id="commentsContainer" alignment="CENTER" spacing="20.0" styleClass="posts-container">
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </VBox>
+
+        </HBox>
+
+
+    </center>
+
+</BorderPane>
+
+
+
