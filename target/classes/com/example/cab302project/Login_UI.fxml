@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302project.Controller.LoginController" stylesheets="@styles.css" styleClass="root" >
+    <padding>
+        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+    </padding>
+
+    <!-- Logo Section -->
+    <ImageView fitHeight="240.0" fitWidth="480.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../../Image_assets/Logo_black.png" />
+        </image>
+    </ImageView>
+
+    <!-- Form Section -->
+    <VBox alignment="CENTER" spacing="20.0" styleClass="form-box" prefHeight="470" prefWidth="450" maxWidth="450">
+        <Label text="Log in" styleClass="form-title"/>
+
+        <TextField fx:id="UsernameField" promptText="Email" prefWidth="300.0" />
+
+        <PasswordField fx:id="PasswordField" promptText="Password" prefWidth="300.0" />
+
+        <!-- Buttons -->
+        <Button onAction="#HandleLoginAction" text="Log in" styleClass="login-button"/>
+
+        <Button onAction="#HandleSignUp" text="Sign up" styleClass="signup-button"/>
+    </VBox>
+
+    <!-- Login Status Label -->
+    <Label fx:id="LoginStatus" styleClass="login-status-label" />
+</VBox>

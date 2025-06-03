@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.cab302project.Controller.CreatePostController" stylesheets="@styles.css">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <VBox alignment="CENTER" spacing="20.0" styleClass="form-box" prefHeight="470" prefWidth="450" maxWidth="450">
+        <Label fx:id="welcomeText2" text="New Post" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Button fx:id="uploadButton" text="Upload Image" onAction="#handleUploadFile" styleClass="login-button"/>
+        <Label fx:id="PostTitle" text="Post Title" styleClass="label">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="PostTitleField" promptText="Enter Post Title" prefWidth="250.0" styleClass="text-field">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0"/>
+            </VBox.margin>
+        </TextField>
+        <Label fx:id="PostDescription" text="Post Description" styleClass="label">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="PostDescriptionField" promptText="Enter Post Description" prefWidth="250.0"
+                   styleClass="text-field">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0"/>
+            </VBox.margin>
+        </TextField>
+        <Label fx:id="CarMake" text="Car Make" styleClass="label">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="CarMakeField" promptText="Enter Car Make" prefWidth="250.0" styleClass="text-field">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0"/>
+            </VBox.margin>
+        </TextField>
+        <Label fx:id="CarModel" text="Car Model" styleClass="label">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="CarModelField" promptText="Enter Car Model" prefWidth="250.0" styleClass="text-field">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0"/>
+            </VBox.margin>
+        </TextField>
+        <Label fx:id="PostLocation" text="Post Location" styleClass="label">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="LocationField" promptText="Enter Post Location" prefWidth="250.0" styleClass="text-field">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0"/>
+            </VBox.margin>
+        </TextField>
+        <HBox spacing="20.0" alignment="CENTER" style="-fx-border-color: transparent;">
+            <Button fx:id="cancelButton" text="Cancel" onAction="#onCancelButtonClick" HBox.hgrow="ALWAYS"
+                    alignment="CENTER_LEFT" styleClass="login-button"/>
+            <Region fx:id="spacer" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="postButton" text="Post" onAction="#onPostButtonClick" HBox.hgrow="ALWAYS"
+                    alignment="CENTER_RIGHT" styleClass="login-button"/>
+        </HBox>
+    </VBox>
+</VBox>

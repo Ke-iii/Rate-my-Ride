@@ -1,0 +1,109 @@
+/* General styling */
+.root {
+    -fx-font-family: "Roboto";
+    -fx-font-size: 16px;
+}
+
+/* Top panel styling */
+.top-bar {
+    -fx-padding: 10;
+    -fx-background-color: black;
+    -fx-spacing: 20; /* Even spacing between elements */
+}
+
+/* Search bar styling */
+.search-bar {
+    -fx-pref-width: 400;
+    -fx-padding: 10;
+    -fx-background-color: white;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 30; /* Rounded corners */
+    -fx-background-radius: 30;
+}
+
+/* Profile picture circular style */
+.profile-picture-circle {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+    -fx-clip: circle(20px at 20px 20px); /* Circular crop for the profile picture */
+}
+
+/* Add post button styling */
+.add-post-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-text-size: 16px
+}
+
+/* Left settings panel styling */
+.settings-panel {
+    -fx-padding: 20;
+}
+
+.setting_text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.settings-button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: lightgray;
+    -fx-pref-width: 150;
+    -fx-padding: 5;
+    -fx-font-size: 16px;
+}
+
+/* Edit profile panel styling */
+.edit-profile-panel {
+    -fx-padding-right: 20;
+    -fx-padding: 10;
+    -fx-border-color: lightgray;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.edit-profile-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.change-picture-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Form grid styling */
+.form-grid {
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+/* Button styling */
+.cancel-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 20;
+}
+
+.save-button {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 20;
+}
